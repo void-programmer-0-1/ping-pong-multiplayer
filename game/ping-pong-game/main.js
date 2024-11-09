@@ -1,8 +1,8 @@
 import './style.css'
+import PingPongGame from './game.js';
 
-let counter = 0;
+const game = new PingPongGame("game");
 
-document.getElementById("counter").addEventListener("click", function(){
-  counter++;
-  document.getElementById("count").innerText = `${counter}`;
-});
+
+
+
