@@ -1,0 +1,20 @@
+
+.split-screen {
+    display: flex;
+    height: 100vh;
+}
+
+.left-form,
+.right-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.divider {
+    width: 5px;
+    background-color: #333;
+}
+
+.navbar {
+    background-color: #111;
+}

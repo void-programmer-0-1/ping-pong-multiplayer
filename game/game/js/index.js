@@ -1,4 +1,4 @@
 
 function gameRedirect() {
-    window.location.href = "/pong-game";
+    window.location.href = "/room";
 } 

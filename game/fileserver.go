@@ -36,7 +36,15 @@ func aboutRoute(w http.ResponseWriter, r* http.Request){
 	}
 }
 
-
+func roomRoute(w http.ResponseWriter, r* http.Request){
+	tmpl := template.Must(template.ParseFiles("game/room.html"))
+	err := tmpl.Execute(w, nil)
+	if err != nil{
+		http.Error(w, "Failed to render template", http.StatusInternalServerError)
+		log.Println("Template execution error:", err)
+		return
+	}
+}
 
 func main() {
 
@@ -44,6 +52,7 @@ func main() {
 	http.HandleFunc("/", homeRoute)
 	http.HandleFunc("/about", aboutRoute)
 	http.HandleFunc("/pong-game", gameRoute)
+	http.HandleFunc("/room", roomRoute)
 
 	log.Println("Server started at http://localhost:8080")
 	err := http.ListenAndServe(":8080", nil)
