@@ -4,3 +4,6 @@ build:
 
 run:
 	./fileserver
+
+destroy:
+	rm fileserver
