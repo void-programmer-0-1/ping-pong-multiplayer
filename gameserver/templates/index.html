@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', path='/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/index.css') }}">
+    <script src="{{ url_for('static', path='/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/index.js') }}"></script>
+    <title>Ping Pong Game</title>
+  </head>
+  <body>
+
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">PingPong</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">PingPong</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Game Section -->
+    <div class="game-container">
+      <div id="game-content">
+        <h1 class="text-center">Welcome to Ping Pong Game</h1>
+        <button id="play-button" class="btn btn-primary" onclick="gameRedirect()">Create Room</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2024 PingPong Game. Made at Spear Software Systems</p>
+    </footer>
+
+  </body>
+</html>
