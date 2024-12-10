@@ -16,5 +16,30 @@ async def home_route(request: Request):
         name="index.html"
     )
 
+@server.get("/about")
+async def home_route(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="about.html"
+    )
+
+@server.get("/room")
+async def home_route(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="room.html"
+    )
+
+
+@server.get("/pong-game")
+async def home_route(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="game.html"
+    )
+
+
+
+
 
 
